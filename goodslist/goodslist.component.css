@@ -1,0 +1,26 @@
+ul,li{
+    list-style: none;
+}
+li{
+    width: 40%;
+    font-size: 12px;
+    float: left;
+    margin: 5%;
+    width:180px;
+    height: 260px;
+    background:rgb(233, 223, 224);
+}
+img{
+    width: 100%;
+    height: 200px;
+}
+.price{
+    color: orangered;
+    font-size: 15px;
+    float: left;
+    font-weight: bold;
+}
+.discount{
+    font-size: 10px;
+    float: right;
+}

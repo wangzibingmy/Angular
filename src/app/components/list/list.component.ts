@@ -1,16 +1,20 @@
-import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
-
+import { Component,Optional, OnInit,Input,Output,EventEmitter} from '@angular/core';
+import { Service1Service} from '../../services/service1.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
- 
-  constructor() { }
+  //getdata=new Service1Service();
+  
+  constructor(@Optional() public getdata:Service1Service) { 
+    
+  }
   @Input()  dataArr:Array<any>;
   @Output() getIndex=new EventEmitter();
   ngOnInit() {
+    //this.getdata.get();
   }
   aa;
   dataA = [];

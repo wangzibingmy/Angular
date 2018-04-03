@@ -12,15 +12,17 @@ export class HomePage {
   usrid='';
   pw='';
   dl(){
-    this.http.post('http://datainfo.duapp.com/shopdata/userinfo.php',{status:'login',userID:this.usrid,password:this.pw}).subscribe(data=>{
+    this.http.post('http://datainfo.duapp.com/shopdata/userinfo.php',{status:'login',userID:this.usrid,password:this.pw},{headers:this.headers},).subscribe(data=>{
       console.log(data);
       if(data['_body']==0){
         console.log('用户名不存在！');
       }else if(data['_body']==2){
         console.log('用户名密码不符！');
+      }else{
+        
       }
     },err=>{
-      console.log("err");
+      console.log("ERROR");
     });
   }
 }

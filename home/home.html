@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>--登录--</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-img class="imgs" src="../assets/imgs/qq1.png" width="100px" height="100px"></ion-img>
+
+  <ion-list class="list">
+    <ion-item>
+      <ion-label color="primary">账号：</ion-label>
+      <ion-input placeholder="请输入账号" [(ngModel)]="usrid"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">密码：</ion-label>
+      <ion-input placeholder="请输入密码" [(ngModel)]="pw"></ion-input>
+    </ion-item>
+
+    <button class="btn" ion-button round (click)="dl()">登录</button>
+  </ion-list>
+</ion-content>

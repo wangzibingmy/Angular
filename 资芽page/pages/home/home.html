@@ -1,0 +1,226 @@
+<ion-header text-center>
+  <ion-navbar color="yel">  
+    <button ion-button menuToggle #mycontent>Menu</button>   
+    <ion-title class="tl">
+      <img style="height:38px;" src="../assets/images/logo.png">
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+
+<ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-list>
+          <ion-item menuClose detail-none>Close Menu</ion-item>
+      </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-content padding class="cont">
+
+  <ion-slides class="slider" autoplay="3000" loop=true pager=true >
+    <ion-slide>
+      <img src="../assets/images/slide.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/images/slide.png">
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-segment [(ngModel)]="search" color="yel">
+    <ion-segment-button value="infor">
+      找信息
+    </ion-segment-button>
+    <ion-segment-button value="service">
+      找服务
+    </ion-segment-button>
+  </ion-segment>
+  <div [(ngSwitch)]="search">
+    <ion-list *ngSwitchCase="'infor'">
+        <ion-grid class="seali">
+            <ion-row>
+                <ion-col>
+                    <img src="../assets/images/money.png">
+                    <span>资产转让</span>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/images/zhuanr.png">
+                      <span>债权转让</span>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/images/smoney.png">
+                      <span>固产转让</span>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/images/sybl.png">
+                    <span>商业保理</span>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <img src="../assets/images/dddb.png">
+                    <span>典当担保</span>
+                  </ion-col>
+                  <ion-col>
+                      <img src="../assets/images/rz.png">
+                      <span>融资借贷</span>
+                  </ion-col>
+                  <ion-col>
+                      <img src="../assets/images/xsxx.png">
+                      <span>悬赏信息</span>
+                  </ion-col>
+                  <ion-col>
+                      <img src="../assets/images/jzdc.png">
+                      <span>尽职调查</span>
+                  </ion-col>
+              </ion-row>
+        </ion-grid>    
+      <ion-item class="you">
+          <ul>
+            <li>
+              <img src="../assets/images/yzxx.png" style="float:left;height:45px;">
+              <span style="float:left;font-size:25px;">优质信息</span>
+            </li>
+          </ul>
+      </ion-item>
+
+      <ion-list *ngFor="let i of items">
+          <ion-item class="little">
+              <ul>
+                <li>
+                  <span>资产转让</span>
+                  <small>&nbsp;&nbsp;--FB001</small>
+                </li>
+              </ul>
+          </ion-item>
+          <ion-item class="listi">
+              <ul class="one">
+                <li>
+                  <img src="../assets/images/bm.png" style="float:left;">
+                  <div class="listli">
+                    <ul>
+                        <li><span>地区：</span>北京</li>                
+                    </ul>
+                    <ul>
+                        <li><span>来源：</span>银行</li>                 
+                    </ul>
+                    <ul>
+                        <li><span>资产包类型：</span>抵押</li>   
+                    </ul>
+                  </div>
+                  <div class="zje">
+                    <p>500万</p>
+                    <span>总金额</span>
+                  </div>
+                  <div class="zje">
+                      <p>300万</p>
+                      <span>转让价</span>
+                    </div>
+                </li>
+              </ul>
+          </ion-item>
+      </ion-list> 
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+          <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+              
+    </ion-list>
+    <!-- 找服务 -->
+    <ion-list *ngSwitchCase="'service'">
+        <ion-grid class="seali">
+            <ion-row>
+              <ion-col>
+                  <img src="../assets/images/money.png">
+                  <span>资产转让</span>
+              </ion-col>
+              <ion-col>
+                  <img src="../assets/images/zhuanr.png">
+                    <span>催收机构</span>
+              </ion-col>
+              <ion-col>
+                  <img src="../assets/images/smoney.png">
+                    <span>律师事务</span>
+              </ion-col>
+              <ion-col>
+                  <img src="../assets/images/sybl.png">
+                  <span>保理公司</span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <img src="../assets/images/dddb.png">
+                  <span>资金过桥</span>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/images/rz.png">
+                    <span>投资贷款</span>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/images/xsxx.png">
+                    <span>固定收购</span>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/images/jzdc.png">
+                    <span>尽职调查</span>
+                </ion-col>
+              </ion-row>
+        </ion-grid>
+        
+        <ion-item class="you">
+            <ul>
+              <li>
+                <img src="../assets/images/yzxx.png" style="float:left;height:45px;">
+                <span style="float:left;font-size:25px;">精选服</span>
+              </li>
+            </ul>
+        </ion-item>
+
+        <ion-list *ngFor="let i of items">
+            <ion-item class="little">
+                <ul>
+                  <li>
+                    <span>资产收购</span>
+                    <small>&nbsp;&nbsp;--PV1001</small>
+                  </li>
+                </ul>
+            </ion-item>
+            <ion-item class="listi">
+                <ul class="one">
+                  <li>
+                    <img src="../assets/images/bm.png" style="float:left;">
+                    <div class="listli">
+                      <ul>
+                          <li><span>地区：</span>北京</li>                
+                      </ul>
+                      <ul>
+                          <li><span>来源：</span>银行</li>                 
+                      </ul>
+                      <ul>
+                          <li><span>资产包类型：</span>抵押</li>   
+                      </ul>
+                    </div>
+                    <div class="zje">
+                      <p>500万</p>
+                      <span>总金额</span>
+                    </div>
+                    <div class="zje">
+                        <p>300万</p>
+                        <span>转让价</span>
+                      </div>
+                  </li>
+                </ul>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+        </ion-infinite-scroll> 
+    </ion-list>
+  </div>
+  
+    
+</ion-content>

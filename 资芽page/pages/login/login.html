@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar color="tou" class="hea">
+      <ion-title>登录</ion-title>
+      <ion-buttons end>
+          <button ion-button icon-only>
+              <ion-icon ></ion-icon>
+          </button>
+       </ion-buttons>
+    </ion-navbar>
+     
+  </ion-header>
+  
+   <ion-content padding class="con">
+      <img class="imgs" src="../assets/loginimg/logo.png">
+      <p class="sp">全球不良资产超级综合服务平台</p>
+
+      <ion-list class="list">       
+        <ion-item class="listinp">
+          <ion-label>
+            <img src="../assets/loginimg/name.png">
+          </ion-label>
+          <ion-input placeholder="请输入您的手机号" [(ngModel)]="usrid" ></ion-input>
+        </ion-item>
+    
+        <ion-item class="listinp">
+          <ion-label>
+            <img src="../assets/loginimg/pw.png">
+          </ion-label>
+          <ion-input placeholder="请输入密码" [(ngModel)]="pw"></ion-input>
+        </ion-item>
+    
+        <button class="loginbtn" ion-button round (click)="sy()">登录</button>
+        <button class="registerbtn" ion-button round (click)="zc()">注册</button>
+      </ion-list>
+      <div (click)="findpassword()">
+        <span class="span1">忘记密码？</span>
+      </div> 
+      
+      
+      
+    </ion-content>
+    
+  

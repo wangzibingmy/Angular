@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="tou" class="hea">
+    <ion-title>找回密码</ion-title>
+    <ion-buttons end class="loginhb">
+        <button ion-button icon-only>
+            <ion-icon ></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="con">
+  <ion-list class="lis">       
+    <ion-item class="listinpt">
+      <ion-label>
+        <img src="../assets/registerimg/phone.png">
+      </ion-label>
+      <ion-input placeholder="手机号" [(ngModel)]="usrid" ></ion-input>
+    </ion-item>
+
+    <ion-item class="yzminp">
+      <ion-label>
+        <img src="../assets/registerimg/yzm.png">
+      </ion-label>
+      <ion-input placeholder="请输入验证码" [(ngModel)]="pw"></ion-input>
+    </ion-item>
+    
+    <button class="yzmbtn" ion-button (click)="yzm()">获取验证码</button>
+
+    <ion-item class="listinpt">
+      <ion-label>
+        <img src="../assets/registerimg/suo1.png">
+      </ion-label>
+      <ion-input placeholder="请输入密码" [(ngModel)]="pw"></ion-input>
+    </ion-item>
+
+    <ion-item class="listinpt">
+      <ion-label>
+        <img src="../assets/registerimg/suo2.png">
+      </ion-label>
+      <ion-input placeholder="请再次输入密码" [(ngModel)]="pw"></ion-input>
+    </ion-item>
+
+    <ion-list class="listtwo">
+      <button class="rbtn" ion-button round (click)="dl()">确认</button> 
+    </ion-list>
+    
+  </ion-list>
+</ion-content>
+

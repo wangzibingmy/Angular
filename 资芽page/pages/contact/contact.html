@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="yel" >
+        <ion-title style="text-align:center;">
+        消息
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+      
+<ion-content padding class="minebg">
+    <ion-list class="talkli" style="margin-top:0px">
+        <ion-item (click)="systalk()">
+            <ul>
+                <li>
+                    <img src="../assets/talkimg/ziya.jpg">
+                    <ul class="talkna">
+                        <li>
+                            <font>系统消息</font>
+                            <p>我是资芽，还记得我吗</p>
+                        </li>
+                    </ul>
+                    <time class="time">2:45</time>                 
+                </li>
+            </ul>
+        </ion-item>
+        <ion-item (click)="systalk()">
+            <ul>
+                <li>
+                    <img src="../assets/talkimg/fxx.jpg">
+                    <ul class="talkna">
+                        <li>
+                            <font>王教授</font>
+                            <p>我还有一些问题呢</p>
+                        </li>
+                    </ul>
+                    <time class="time">2:45</time>                 
+                </li>
+            </ul>
+        </ion-item>
+        <ion-item (click)="systalk()">
+            <ul>
+                <li>
+                    <img src="../assets/talkimg/fxx.jpg">
+                    <ul class="talkna">
+                        <li>
+                            <font>张律师</font>
+                            <p>我还有一些问题呢</p>
+                        </li>
+                    </ul>
+                    <time class="time">3:40</time>                 
+                </li>
+            </ul>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -2,17 +2,25 @@ import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { FindinforPage } from '../findinfor/findinfor';
+import { InfordetailPage } from '../infordetail/infordetail';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController,params: NavParams) {
+  constructor(public navCtrl: NavController,public navParams: NavParams) {
     for (let i = 0; i < 3; i++) {
       this.items.push( this.items.length );
     }
    
+  }
+  findinformation(){
+    this.navCtrl.push(FindinforPage,this.navParams);
+  }
+  inforde(){
+    this.navCtrl.push(InfordetailPage,this.navParams);
   }
   search="infor";
   items = [];
@@ -30,6 +38,7 @@ export class HomePage {
     }, 500);
   }
 
+  
 
 
 

@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar color="yel">
+    <ion-title style="text-align:center">找信息</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+          <ion-icon ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar class="seabar">
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar> 
+  <ion-item class="selopt">
+    <ion-select [(ngModel)]="genderone" class="gend">
+      <ion-option value="l" selected>信息类型</ion-option>
+      <ion-option value="z">资产包转让</ion-option>
+      <ion-option value="g">固产转让</ion-option>
+      <ion-option value="r">债权转让</ion-option>
+      <ion-option value="f">法律服务</ion-option>
+      <ion-option value="s">商业保理</ion-option>
+      <ion-option value="d">典当担保</ion-option>
+      <ion-option value="j">融资借贷</ion-option>
+      <ion-option value="w">委外催收</ion-option>
+      <ion-option value="q">资产求购</ion-option>
+      <ion-option value="x">悬赏信息</ion-option>
+      <ion-option value="d">尽职调查</ion-option>
+    </ion-select>
+    <ion-select [(ngModel)]="gendertwo" class="gend">
+      <ion-option value="bj" selected>北京</ion-option>
+      <ion-option value="gz">广州</ion-option>
+      <ion-option value="sh">上海</ion-option>
+      <ion-option value="hb">河北</ion-option>
+      <ion-option value="yn">云南</ion-option>
+      <ion-option value="js">江苏</ion-option>
+      <ion-option value="sd">山东</ion-option>
+      <ion-option value="hn">海南</ion-option>
+      <ion-option value="hlj">黑龙江</ion-option>
+      <ion-option value="jl">吉林</ion-option>
+      <ion-option value="ln">辽宁</ion-option>
+    </ion-select>
+    <ion-select [(ngModel)]="genderthree" class="gend">
+      <ion-option value="dy" selected>抵押</ion-option>
+      <ion-option value="xy">信用</ion-option>
+      <ion-option value="zhl">综合类</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-header>
+
+<ion-content padding class="minebg">
+  <ion-list *ngFor="let i of items">
+    <ion-item class="little">
+        <ul>
+          <li>
+            <span>资产转让</span>
+            <small>&nbsp;&nbsp;--FB001</small>
+          </li>
+        </ul>
+    </ion-item>
+    <ion-item class="listi">
+        <ul class="one">
+          <li>
+            <img src="../assets/images/bm.png" style="float:left;">
+            <div class="listli">
+              <ul>
+                  <li><span>地区：</span>北京</li>                
+              </ul>
+              <ul>
+                  <li><span>来源：</span>银行</li>                 
+              </ul>
+              <ul>
+                  <li><span>资产包类型：</span>抵押</li>   
+              </ul>
+            </div>
+            <div class="zje">
+              <p>500万</p>
+              <span>总金额</span>
+            </div>
+            <div class="zje">
+                <p>300万</p>
+                <span>转让价</span>
+              </div>
+          </li>
+        </ul>
+    </ion-item>
+</ion-list> 
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

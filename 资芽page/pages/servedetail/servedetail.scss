@@ -1,3 +1,82 @@
-page-servedetail {
-
+.servedeli{
+    width: 100%;
+}
+.servedeli_1{
+    width: 70%;
+    float: left;
+}
+.servedeli_1_2{
+    margin-top: 10px;
+    color: #b6b6b6;
+}
+.servedeli_1 ul li{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.servedeli_2{
+    width: 20%;
+    float: right;
+    height: auto;
+    color: #b6b6b6;
+}
+.servede_bf ul li{
+    font-size: 20px;
+    float: left;
+    width: 20%;
+}
+.servede_bf ul :first-child{
+    margin-left: 15px;
+    color: #b6b6b6;
+}
+.servede_bf_third{
+    margin-left: 25px;
+    color: #b6b6b6;
+}
+.servede_vip{
+    color: #cc0033;
+}
+.servede_gsjj ul li{
+    font-size: 20px;
+    margin-left: 15px;
+}
+.servede_gs{
+    width: 100%;
+}
+.servede_jjcon ul li{
+    float: left;
+    color: #666666;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.servede_jjcon ion-label{
+    white-space: normal;
+}
+.servede_jjcon{
+    height: auto;
+}
+.servede_zwjz ul li{
+    color: #666666;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.servede_fwdq{
+    width: 100%;
+    
+}
+.servede_fwdq ul :first-child{
+    color: #666666;
+    float: left;
+    margin-left: 15px;
+}
+.servede_fwdq ul li{
+    float: left;
+    font-size: 20px;
+}
+.servede_pic{
+    width: 100%;
+}
+.servede_picna ul li{
+    margin-left: 15px;
+    font-size: 20px;
 }

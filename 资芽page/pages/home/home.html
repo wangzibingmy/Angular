@@ -44,37 +44,37 @@
     <ion-list *ngSwitchCase="'infor'">
         <ion-grid class="seali">
             <ion-row>
-                <ion-col>
+                <ion-col (click)="findinformation()">
                     <img src="../assets/images/money.png">
                     <span>资产转让</span>
                 </ion-col>
-                <ion-col>
+                <ion-col (click)="findinformation()">
                     <img src="../assets/images/zhuanr.png">
                       <span>债权转让</span>
                 </ion-col>
-                <ion-col>
+                <ion-col (click)="findinformation()">
                     <img src="../assets/images/smoney.png">
                       <span>固产转让</span>
                 </ion-col>
-                <ion-col>
+                <ion-col (click)="findinformation()">
                     <img src="../assets/images/sybl.png">
                     <span>商业保理</span>
                 </ion-col>
               </ion-row>
               <ion-row>
-                  <ion-col>
+                  <ion-col (click)="findinformation()">
                       <img src="../assets/images/dddb.png">
                     <span>典当担保</span>
                   </ion-col>
-                  <ion-col>
+                  <ion-col (click)="findinformation()">
                       <img src="../assets/images/rz.png">
                       <span>融资借贷</span>
                   </ion-col>
-                  <ion-col>
+                  <ion-col (click)="findinformation()">
                       <img src="../assets/images/xsxx.png">
                       <span>悬赏信息</span>
                   </ion-col>
-                  <ion-col>
+                  <ion-col (click)="findinformation()">
                       <img src="../assets/images/jzdc.png">
                       <span>尽职调查</span>
                   </ion-col>
@@ -98,7 +98,7 @@
                 </li>
               </ul>
           </ion-item>
-          <ion-item class="listi">
+          <ion-item class="listi" (click)="inforde()">
               <ul class="one">
                 <li>
                   <img src="../assets/images/bm.png" style="float:left;">

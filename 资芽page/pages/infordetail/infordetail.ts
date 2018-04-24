@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Slides } from 'ionic-angular';
+
 /**
- * Generated class for the ServedetailPage page.
+ * Generated class for the InfordetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { Slides } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-servedetail',
-  templateUrl: 'servedetail.html',
+  selector: 'page-infordetail',
+  templateUrl: 'infordetail.html',
 })
-export class ServedetailPage {
+export class InfordetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ServedetailPage');
+    console.log('ionViewDidLoad InfordetailPage');
   }
 
 }

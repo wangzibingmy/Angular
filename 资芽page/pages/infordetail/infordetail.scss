@@ -18,3 +18,46 @@
     color: #b6b6b6;
     margin-left: 40px;
 }
+.inforde_downl{
+    width: 100%;
+}
+.inforde_downl ul li{
+    margin-left: 15px;
+    float: left;
+    font-size: 20px;
+}
+.inforde_pc{
+    color: #b6b6b6;
+}
+.inforde_downl ul :last-child{
+    margin-right: 20px;
+    float: right;
+}
+.inforde_btm{
+    width: 100%;
+    bottom: 0;
+    // position: fixed;
+}
+.inforde_btm ul li{
+    text-align: center;
+    line-height: 70px;
+    width: 33.3333%;
+    float: left;
+    font-size: 24px;
+}
+.inforde_btm .label-md {
+    margin: 0;
+}
+.inforde_btm ul :first-child{
+    font-size: 18px;
+}
+.ckqdr{
+    color: white;
+    background-color: #ff3366;
+}
+.inforde_btm ul :last-child{
+    background-color: #fedb47;
+}
+.inforde_bg{
+    background-color: #f9f9f9;
+}

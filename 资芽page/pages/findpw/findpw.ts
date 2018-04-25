@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-/**
- * Generated class for the FindpwPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -17,11 +11,24 @@ export class FindpwPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FindpwPage');
-  }
   dl(){
     this.navCtrl.push(LoginPage,this.navParams);
   }
+  ionViewDidLoad(){
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+       Object.keys(elements).map((key) => {
+          elements[key].style.display = 'none';
+         });
+       }   
+  }
+  ionViewWillLeave() {
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+	    Object.keys(elements).map((key) => {
+    		elements[key].style.display = 'flex';
+	    });
+    }
+  }
+  
 }

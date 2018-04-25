@@ -10,10 +10,6 @@ export class SettingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingPage');
-  }
   denglu(){
     this.navCtrl.push(LoginPage,this.navParams);
   }
@@ -28,5 +24,22 @@ export class SettingPage {
       console.log(data);
     });
     profileModal.present();
+  }
+
+  ionViewDidLoad(){
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+       Object.keys(elements).map((key) => {
+          elements[key].style.display = 'none';
+         });
+       }   
+  }
+  ionViewWillLeave() {
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+	    Object.keys(elements).map((key) => {
+    		elements[key].style.display = 'flex';
+	    });
+    }
   }
 }

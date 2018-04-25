@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController,NavParams} from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { FindinforPage } from '../findinfor/findinfor';
 import { InfordetailPage } from '../infordetail/infordetail';
-@Component({
+import { ServedetailPage }from '../servedetail/servedetail';
+ @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
@@ -14,14 +15,25 @@ export class HomePage {
     for (let i = 0; i < 3; i++) {
       this.items.push( this.items.length );
     }
-   
+    
   }
   findinformation(){
-    this.navCtrl.push(FindinforPage,this.navParams);
+    this.navCtrl.push(FindinforPage, {
+      name: "找信息"
+    });
+  }
+  findserve(){
+    this.navCtrl.push(FindinforPage, {
+      name: "找服务"
+    });
+  }
+  servede(){
+    this.navCtrl.push(ServedetailPage,this.navParams);
   }
   inforde(){
     this.navCtrl.push(InfordetailPage,this.navParams);
   }
+  
   search="infor";
   items = [];
   doInfinite(infiniteScroll) {

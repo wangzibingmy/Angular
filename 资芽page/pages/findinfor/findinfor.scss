@@ -1,13 +1,20 @@
-page-findinfor {
-
+.searchbar{
+    background-color: #fedb47;
 }
-// .searchbar-md{
-//     padding: 0;
-// }
-// .searchbar-md .searchbar-input{
-//     border-radius: 0 0 8px 8px;
-// }
+.searchbar-md .searchbar-input{
+    border-radius: 10px;
+}
 .gend{
     width: 32%;
     text-align: center;
+}
+.item-radio.item-md ion-label {
+    margin-left: 15px;
+}
+.input-wrapper{
+    width: 100%;
+    padding-right: 20px;
+}
+.popover-md .popover-content {
+    width:32%;
 }

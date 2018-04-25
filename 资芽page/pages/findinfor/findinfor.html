@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="yel">
-    <ion-title style="text-align:center">找信息</ion-title>
+    <ion-title style="text-align:center">{{item}}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
           <ion-icon ></ion-icon>
@@ -14,7 +14,7 @@
     (ionCancel)="onCancel($event)">
   </ion-searchbar> 
   <ion-item class="selopt">
-    <ion-select [(ngModel)]="genderone" class="gend">
+    <ion-select [(ngModel)]="genderone" class="gend" interface="popover">
       <ion-option value="l" selected>信息类型</ion-option>
       <ion-option value="z">资产包转让</ion-option>
       <ion-option value="g">固产转让</ion-option>
@@ -28,7 +28,7 @@
       <ion-option value="x">悬赏信息</ion-option>
       <ion-option value="d">尽职调查</ion-option>
     </ion-select>
-    <ion-select [(ngModel)]="gendertwo" class="gend">
+    <ion-select [(ngModel)]="gendertwo" class="gend" interface="popover">
       <ion-option value="bj" selected>北京</ion-option>
       <ion-option value="gz">广州</ion-option>
       <ion-option value="sh">上海</ion-option>
@@ -41,7 +41,7 @@
       <ion-option value="jl">吉林</ion-option>
       <ion-option value="ln">辽宁</ion-option>
     </ion-select>
-    <ion-select [(ngModel)]="genderthree" class="gend">
+    <ion-select [(ngModel)]="genderthree" class="gend" interface="popover">
       <ion-option value="dy" selected>抵押</ion-option>
       <ion-option value="xy">信用</ion-option>
       <ion-option value="zhl">综合类</ion-option>
@@ -59,10 +59,10 @@
           </li>
         </ul>
     </ion-item>
-    <ion-item class="listi">
+    <ion-item class="listi" (click)="inforde()">
         <ul class="one">
           <li>
-            <img src="../assets/images/bm.png" style="float:left;">
+            <img src="assets/images/bm.png" style="float:left;">
             <div class="listli">
               <ul>
                   <li><span>地区：</span>北京</li>                

@@ -14,8 +14,21 @@ export class TalkingPage {
     this.item=name;
     console.log(this.item);
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TalkingPage');
+  ionViewDidLoad(){
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+       Object.keys(elements).map((key) => {
+          elements[key].style.display = 'none';
+         });
+       }   
+  }
+  ionViewWillLeave() {
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+	    Object.keys(elements).map((key) => {
+    		elements[key].style.display = 'flex';
+	    });
+    }
   }
  
 }

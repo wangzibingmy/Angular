@@ -2,7 +2,7 @@
   <ion-navbar color="yel">  
     <button ion-button menuToggle #mycontent>Menu</button>   
     <ion-title class="tl">
-      <img style="height:38px;" src="../assets/images/logo.png">
+      <img style="height:38px;" src="assets/images/logo.png">
     </ion-title>
     <ion-buttons end>
         <button ion-button icon-only color="royal">
@@ -14,9 +14,18 @@
 
 
 <ion-menu [content]="mycontent">
-    <ion-content>
-      <ion-list>
-          <ion-item menuClose detail-none>Close Menu</ion-item>
+    <ion-content class="minebg">
+      <ion-list class="menulst">
+          <ion-item menuClose detail-none>
+              <ul>
+                  <li>
+                      <img src="assets/mineimg/fcc.jpg">
+                  </li>
+                  <li>姓名：福西西</li>
+                  <li>地址：北京市海淀区</li>
+                  <li>公司：北京市资芽网络科技有限公司</li>
+              </ul>
+          </ion-item>
       </ion-list>
     </ion-content>
 </ion-menu>
@@ -25,10 +34,10 @@
 
   <ion-slides class="slider" autoplay="3000" loop=true pager=true >
     <ion-slide>
-      <img src="../assets/images/slide.png">
+      <img src="assets/images/slide.png">
     </ion-slide>
     <ion-slide>
-      <img src="../assets/images/slide.png">
+      <img src="assets/images/slide.png">
     </ion-slide>
   </ion-slides>
   
@@ -45,37 +54,37 @@
         <ion-grid class="seali">
             <ion-row>
                 <ion-col (click)="findinformation()">
-                    <img src="../assets/images/money.png">
+                    <img src="assets/images/money.png">
                     <span>资产转让</span>
                 </ion-col>
                 <ion-col (click)="findinformation()">
-                    <img src="../assets/images/zhuanr.png">
+                    <img src="assets/images/zhuanr.png">
                       <span>债权转让</span>
                 </ion-col>
                 <ion-col (click)="findinformation()">
-                    <img src="../assets/images/smoney.png">
+                    <img src="assets/images/smoney.png">
                       <span>固产转让</span>
                 </ion-col>
                 <ion-col (click)="findinformation()">
-                    <img src="../assets/images/sybl.png">
+                    <img src="assets/images/sybl.png">
                     <span>商业保理</span>
                 </ion-col>
               </ion-row>
               <ion-row>
                   <ion-col (click)="findinformation()">
-                      <img src="../assets/images/dddb.png">
+                      <img src="assets/images/dddb.png">
                     <span>典当担保</span>
                   </ion-col>
                   <ion-col (click)="findinformation()">
-                      <img src="../assets/images/rz.png">
+                      <img src="assets/images/rz.png">
                       <span>融资借贷</span>
                   </ion-col>
                   <ion-col (click)="findinformation()">
-                      <img src="../assets/images/xsxx.png">
+                      <img src="assets/images/xsxx.png">
                       <span>悬赏信息</span>
                   </ion-col>
                   <ion-col (click)="findinformation()">
-                      <img src="../assets/images/jzdc.png">
+                      <img src="assets/images/jzdc.png">
                       <span>尽职调查</span>
                   </ion-col>
               </ion-row>
@@ -83,7 +92,7 @@
       <ion-item class="you">
           <ul>
             <li>
-              <img src="../assets/images/yzxx.png" style="float:left;height:45px;">
+              <img src="assets/images/yzxx.png" style="float:left;height:45px;">
               <span style="float:left;font-size:25px;">优质信息</span>
             </li>
           </ul>
@@ -101,7 +110,7 @@
           <ion-item class="listi" (click)="inforde()">
               <ul class="one">
                 <li>
-                  <img src="../assets/images/bm.png" style="float:left;">
+                  <img src="assets/images/bm.png" style="float:left;">
                   <div class="listli">
                     <ul>
                         <li><span>地区：</span>北京</li>                
@@ -134,38 +143,38 @@
     <ion-list *ngSwitchCase="'service'">
         <ion-grid class="seali">
             <ion-row>
-              <ion-col>
-                  <img src="../assets/images/money.png">
+              <ion-col (click)="findserve()">
+                  <img src="assets/images/money.png">
                   <span>资产转让</span>
               </ion-col>
-              <ion-col>
-                  <img src="../assets/images/zhuanr.png">
+              <ion-col (click)="findserve()">
+                  <img src="assets/images/zhuanr.png">
                     <span>催收机构</span>
               </ion-col>
-              <ion-col>
-                  <img src="../assets/images/smoney.png">
+              <ion-col (click)="findserve()">
+                  <img src="assets/images/smoney.png">
                     <span>律师事务</span>
               </ion-col>
-              <ion-col>
-                  <img src="../assets/images/sybl.png">
+              <ion-col (click)="findserve()">
+                  <img src="assets/images/sybl.png">
                   <span>保理公司</span>
               </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col>
-                    <img src="../assets/images/dddb.png">
+                <ion-col (click)="findserve()">
+                    <img src="assets/images/dddb.png">
                   <span>资金过桥</span>
                 </ion-col>
-                <ion-col>
-                    <img src="../assets/images/rz.png">
+                <ion-col (click)="findserve()">
+                    <img src="assets/images/rz.png">
                     <span>投资贷款</span>
                 </ion-col>
-                <ion-col>
-                    <img src="../assets/images/xsxx.png">
+                <ion-col (click)="findserve()">
+                    <img src="assets/images/xsxx.png">
                     <span>固定收购</span>
                 </ion-col>
-                <ion-col>
-                    <img src="../assets/images/jzdc.png">
+                <ion-col (click)="findserve()">
+                    <img src="assets/images/jzdc.png">
                     <span>尽职调查</span>
                 </ion-col>
               </ion-row>
@@ -174,8 +183,8 @@
         <ion-item class="you">
             <ul>
               <li>
-                <img src="../assets/images/yzxx.png" style="float:left;height:45px;">
-                <span style="float:left;font-size:25px;">精选服</span>
+                <img src="assets/images/yzxx.png" style="float:left;height:45px;">
+                <span style="float:left;font-size:25px;">精选服务</span>
               </li>
             </ul>
         </ion-item>
@@ -189,10 +198,10 @@
                   </li>
                 </ul>
             </ion-item>
-            <ion-item class="listi">
+            <ion-item class="listi" (click)="servede()">
                 <ul class="one">
                   <li>
-                    <img src="../assets/images/bm.png" style="float:left;">
+                    <img src="assets/images/bm.png" style="float:left;">
                     <div class="listli">
                       <ul>
                           <li><span>地区：</span>北京</li>                

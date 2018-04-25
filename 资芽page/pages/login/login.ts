@@ -3,8 +3,8 @@ import { IonicPage, NavController, NavParams,ModalController,ViewController } fr
 import { RegisterPage} from '../register/register';
 import { FindpwPage } from '../findpw/findpw';
 import {HomePage } from '../home/home';
-// import { Http} from "@angular/http";
-// import { Headers} from "@angular/http";
+import { Http} from "@angular/http";
+import { Headers} from "@angular/http";
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -31,8 +31,21 @@ export class LoginPage {
     this.navCtrl.push(FindpwPage,this.navParams);
   }
   
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  ionViewDidLoad(){
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+       Object.keys(elements).map((key) => {
+          elements[key].style.display = 'none';
+         });
+       }   
+  }
+  ionViewWillLeave() {
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+	    Object.keys(elements).map((key) => {
+    		elements[key].style.display = 'flex';
+	    });
+    }
   }
   
   headers=new Headers({'Content-Type':'application/x-www-form-urlencoded'});

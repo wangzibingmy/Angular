@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ServedetailPage } from '../servedetail/servedetail';
-/**
- * Generated class for the CooperationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -20,8 +14,21 @@ export class CooperationPage {
   servedetail(){
     this.navCtrl.push(ServedetailPage,this.navParams);
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CooperationPage');
+  ionViewDidLoad(){
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+       Object.keys(elements).map((key) => {
+          elements[key].style.display = 'none';
+         });
+       }   
+  }
+  ionViewWillLeave() {
+    let elements = document.querySelectorAll(".tabbar");
+    if (elements != null) {
+	    Object.keys(elements).map((key) => {
+    		elements[key].style.display = 'flex';
+	    });
+    }
   }
 
 }

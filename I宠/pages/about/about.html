@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>健康</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="health-bgcolor">
+  <!-- I宠健康档案 -->
+  <div class="health-document">
+     <div class="health-document-title">
+        <ion-icon name="heart"></ion-icon>
+        <span>I宠健康档案</span>
+     </div> 
+     <div class="health-document-content">
+        <ion-list>
+            <ion-item class="item">
+              <ion-label color="black">身高:</ion-label>
+              <ion-input placeholder="cm"></ion-input>
+            </ion-item>
+
+            <ion-item class="item">
+                <ion-label color="black">体重:</ion-label>
+                <ion-input placeholder="kg"></ion-input>
+            </ion-item>
+            <ion-item class="item">
+                <ion-label color="black">年龄:</ion-label>
+                  <ion-select interface="popover">
+                      <ion-option value="s1" selected>1岁</ion-option>
+                      <ion-option value="s2">2岁</ion-option>
+                      <ion-option value="s3">3岁</ion-option>
+                      <ion-option value="s4">4岁</ion-option>
+                      <ion-option value="s5">5岁</ion-option>
+                      <ion-option value="s6">6岁</ion-option>
+                      <ion-option value="s7">7岁</ion-option>
+                      <ion-option value="s8">8岁</ion-option>
+                  </ion-select>           
+            </ion-item> 
+            
+            <ion-item class="item">
+                <ion-label color="black" class="">体型:</ion-label>
+                  <ion-select interface="popover">
+                      <ion-option value="b1" selected>瘦</ion-option>
+                      <ion-option value="b2">胖</ion-option>
+                  </ion-select>           
+            </ion-item> 
+        </ion-list>
+    </div>
+  </div>
+  <!-- 疫苗接种信息、宠物健康常识 -->
+  <div class="health-menu">
+     <button class="health-btn" (click)="yimiao()"><ion-icon name="md-pulse" color="primary" class="ion"></ion-icon>疫苗接种信息</button>
+     <button class="health-btn" (click)="general()"> <ion-icon name="md-medkit"  color="primary" class="ion"></ion-icon>宠物健康常识</button>
+  </div>
+  <!-- 健康记录 -->
+  <div class="health-record">
+      <div class="health-document-title">
+          <ion-icon name="logo-octocat"></ion-icon>
+          <span>健康记录</span>
+      </div> 
+      <!-- 便签 -->
+      <div class="health-note">
+         <div class="note-date-div"><span>2018-4-25</span></div>
+         <ul class="note-ul">
+           <li class="note-li">
+              <label>吃食：</label>
+              <select>
+                <option>狗粮</option>
+                <option>其他</option>
+              </select>
+           </li>
+           <li class="note-li">
+              <label>活动：</label>
+              <input type="text" placeholder="activities">
+           </li>
+           <li class="note-li">
+              <label>排便：</label>
+              <select>
+                <option>1次</option>
+                <option>2次</option>
+                <option>3次</option>
+              </select>
+           </li>
+           <li class="note-li">
+              <label>其他：</label>
+              <textarea></textarea>
+           </li>
+         </ul>
+
+      </div>
+  </div>
+</ion-content>
+

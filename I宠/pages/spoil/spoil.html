@@ -1,0 +1,123 @@
+
+<ion-header>
+  <ion-navbar color="primary" class="minehea">
+    <ion-title>养宠</ion-title>
+  </ion-navbar>
+  <ion-segment [(ngModel)]="adopt">
+      <ion-segment-button (change)="changeval('jiyang')" value="jiyang">
+        寄养I宠
+      </ion-segment-button>
+      <ion-segment-button (change)="changeval('daiwo')" value="daiwo">
+        带我回家
+      </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg">
+  
+  <div  [ngSwitch]="adopt">
+    <div *ngSwitchCase="'jiyang'">
+      <button ion-item>
+        <ion-icon name="pin"></ion-icon>&nbsp;&nbsp;石家庄
+        <span class="font">更换城市</span>
+        <img class="arrow" src="../../assets/imgs/arrow.png">
+      </button>
+
+      <ion-list style="margin-top:8px;">
+        <ion-item (click)="detail()">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/宠物店01.jpg">
+          </ion-avatar>
+          <h2>爪爪宠物店</h2>
+          <p>地址：石家庄市裕华区文礼大街25号</p>
+        </ion-item>
+        <ion-item (click)="detail()" style="margin-top:5px;">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/宠物店02.jpg">
+          </ion-avatar>
+          <h2>爪爪宠物店</h2>
+          <p>地址：石家庄市裕华区文礼大街25号</p>
+        </ion-item>
+        <ion-item (click)="detail()" style="margin-top:5px;">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/宠物店03.jpg">
+          </ion-avatar>
+          <h2>爪爪宠物店</h2>
+          <p>地址：石家庄市裕华区文礼大街25号</p>
+        </ion-item>
+        
+      </ion-list>
+  </div>
+  <div *ngSwitchCase="'daiwo'">
+      <button ion-item>
+          <ion-icon name="pin"></ion-icon>&nbsp;&nbsp;石家庄
+          <span class="font">更换城市</span>
+          <img class="arrow" src="../../assets/imgs/arrow.png">
+      </button>
+
+      <ion-list class="extra">
+        <ion-item (click)="petdetail()">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/宠物01.jpg">
+          </ion-avatar>
+          <h2>哈士奇</h2>
+          <p>介绍：公狗，二岁…</p>
+          <p>联系电话：13736014982</p>
+          <img class="redarrow" src="../../assets/imgs/redarrow.png">
+        </ion-item>
+        <ion-item (click)="petdetail()" style="margin-top:5px;">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/宠物02.jpg">
+          </ion-avatar>
+          <h2>中华田园猫</h2>
+          <p>介绍：母猫，三岁…</p>
+          <p>联系电话：13736014982</p>
+          <img class="redarrow" src="../../assets/imgs/redarrow.png">
+        </ion-item>
+        <ion-item (click)="petdetail()" style="margin-top:5px;">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/宠物03.jpg">
+          </ion-avatar>
+          <h2>萨摩耶</h2>
+          <p>介绍：公狗，一岁…</p>
+          <p>联系电话：13736014982</p>
+          <img class="redarrow" src="../../assets/imgs/redarrow.png">
+        </ion-item> 
+        <ion-item (click)="petdetail()" style="margin-top:5px;">
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/宠物03.jpg">
+            </ion-avatar>
+            <h2>萨摩耶</h2>
+            <p>介绍：公狗，一岁…</p>
+            <p>联系电话：13736014982</p>
+            <img class="redarrow" src="../../assets/imgs/redarrow.png">
+          </ion-item>  
+          <ion-item (click)="petdetail()" style="margin-top:5px;">
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/宠物03.jpg">
+              </ion-avatar>
+              <h2>萨摩耶</h2>
+              <p>介绍：公狗，一岁…</p>
+              <p>联系电话：13736014982</p>
+              <img class="redarrow" src="../../assets/imgs/redarrow.png">
+            </ion-item>  
+            <ion-item (click)="petdetail()" style="margin-top:5px;">
+                <ion-avatar item-start>
+                  <img src="../../assets/imgs/宠物03.jpg">
+                </ion-avatar>
+                <h2>萨摩耶</h2>
+                <p>介绍：公狗，一岁…</p>
+                <p>联系电话：13736014982</p>
+                <img class="redarrow" src="../../assets/imgs/redarrow.png">
+              </ion-item>        
+      </ion-list>
+      <button ion-button icon-only (click)="petpublish()" class="writeicon">
+          <ion-icon name="create"></ion-icon>
+      </button>
+        
+      
+  </div>
+</div>
+</ion-content>
+
+

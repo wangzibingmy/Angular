@@ -3,6 +3,14 @@
   <ion-navbar color="primary" class="minehea">
     <ion-title>养宠</ion-title>
   </ion-navbar>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="pin" item-start></ion-icon>
+      <ion-label>地点</ion-label>
+      <ion-multi-picker item-content [multiPickerColumns]="cityColumns" [cancelText]="'取消'" [doneText]="'完成'"></ion-multi-picker>
+    </ion-item>
+  </ion-list>
+
   <ion-segment [(ngModel)]="adopt">
       <ion-segment-button (change)="changeval('jiyang')" value="jiyang">
         寄养I宠
@@ -10,19 +18,12 @@
       <ion-segment-button (change)="changeval('daiwo')" value="daiwo">
         带我回家
       </ion-segment-button>
-    </ion-segment>
+  </ion-segment>
 </ion-header>
 
 <ion-content class="bg">
-  
   <div  [ngSwitch]="adopt">
     <div *ngSwitchCase="'jiyang'">
-      <button ion-item>
-        <ion-icon name="pin"></ion-icon>&nbsp;&nbsp;石家庄
-        <span class="font">更换城市</span>
-        <img class="arrow" src="../../assets/imgs/arrow.png">
-      </button>
-
       <ion-list style="margin-top:8px;">
         <ion-item (click)="detail()">
           <ion-avatar item-start>
@@ -49,12 +50,6 @@
       </ion-list>
   </div>
   <div *ngSwitchCase="'daiwo'">
-      <button ion-item>
-          <ion-icon name="pin"></ion-icon>&nbsp;&nbsp;石家庄
-          <span class="font">更换城市</span>
-          <img class="arrow" src="../../assets/imgs/arrow.png">
-      </button>
-
       <ion-list class="extra">
         <ion-item (click)="petdetail()">
           <ion-avatar item-start>

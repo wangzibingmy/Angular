@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , ActionSheetController, AlertController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, AlertController } from 'ionic-angular';
 import {ImagePicker, ImagePickerOptions} from "@ionic-native/image-picker";
 import {Camera, CameraOptions} from "@ionic-native/camera";
 @IonicPage()
 @Component({
-  selector: 'page-petpublish',
-  templateUrl: 'petpublish.html',
+  selector: 'page-text',
+  templateUrl: 'text.html',
 })
-export class PetpublishPage {
+export class TextPage {
   avatar: string = "";
   constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController, public imagePicker: ImagePicker, public camera: Camera) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PetpublishPage');
+    console.log('ionViewDidLoad TextPage');
   }
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
@@ -83,5 +83,4 @@ export class PetpublishPage {
       return value;
     });
   }
-
 }

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-      <ion-title>发布信息</ion-title>
+      <ion-title>新日常</ion-title>
       <ion-buttons end style="width:55px;">
           <button ion-button icon-only class="btn">发布</button>
       </ion-buttons>
@@ -10,16 +10,6 @@
   <ion-input type="textarea" class="textarea" placeholder="来详细描述一下您的爱宠信息吧…"></ion-input>
   <div class="header-image" tappable [ngStyle]="{'background-image': 'url('+avatar+')'}" (click)="presentActionSheet()">
     <img src="../../assets/imgs/camera.png" width="90px" height="85px">
-  </div>
-  <div class="tel">
-      <ion-item>
-          <ion-label color="primary" fixed>联系电话：</ion-label>
-          <ion-input type="tel" placeholder="为方便联系，请您务必填写"></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label color="primary" fixed>地址：</ion-label>
-          <ion-input type="tel" placeholder="为方便联系，请您务必填写"></ion-input>
-      </ion-item>
   </div>
 </ion-content>
 

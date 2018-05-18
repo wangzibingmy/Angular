@@ -3,8 +3,7 @@ import { IonicPage, NavController, NavParams ,Events, Tabs} from 'ionic-angular'
 import { YimiaoPage}from '../yimiao/yimiao';
 import { GeneralPage}from '../general/general';
 import { Subscription } from 'rxjs/Subscription';
-// import { Keyboard } from '@ionic-native/keyboard';
-
+//import {Keyboard} from '@ionic-native/keyboard';
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
@@ -16,11 +15,12 @@ export class AboutPage {
     this.hideSubscription = null;
     this.showSubscription = null;
   }
-  ionViewDidEnter(){
-    // this.hideSubscription = this.keyboard.onKeyboardShow().subscribe(() => this.event.publish('hideTabs'));
-    // this.showSubscription = this.keyboard.onKeyboardHide().subscribe(() => this.event.publish('showTabs'));
-  }
+ 
 
+  // ionViewDidLoad(){
+  //   this.keyboard.onKeyboardShow().subscribe(()=>this.event.publish('hideTabs'));
+  //   this.keyboard.onKeyboardHide().subscribe(()=>this.event.publish('showTabs'));
+  // }
   ionViewWillLeave(){
     // this.keyboard.close();
     if(this.hideSubscription){

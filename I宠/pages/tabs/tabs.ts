@@ -29,6 +29,12 @@ export class TabsPage {
       this.mb = content.style['margin-bottom'];
       this.renderer.setElementStyle(content, 'margin-bottom', '0')
     });
+    this.event.subscribe('showTabs',()=>{
+      this.renderer.setElementStyle(tabs,'display','');
+      let SelectTab = this.tabRef.getSelected()._elementRef.nativeElement;
+      let content = this.queryElement(SelectTab,'.scroll-content');
+      this.renderer.setElementStyle(content,'margin-bottom',this.mb)
+    })
   }
   queryElement(elem: HTMLElement, q: string): HTMLElement {
     return <HTMLElement>elem.querySelector(q);

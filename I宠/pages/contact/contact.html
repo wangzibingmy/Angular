@@ -1,27 +1,27 @@
 <ion-content class="conbg">
   <ion-grid>
     <ion-row class="con_row">
-      <ion-col>
+      <ion-col (click)="text()">
           <ion-item class="con_1" >
               <ion-icon name="create"></ion-icon>             
           </ion-item>
           <font>文字</font>
       </ion-col>
-      <ion-col>
+      <ion-col (click)="takePhoto()" tappable [ngStyle]="{'background-image': 'url('+avatar+')'}">
           <ion-item class="con_2">
               <ion-icon name="camera"></ion-icon>             
           </ion-item>
           <font>拍摄</font>
       </ion-col>
-      <ion-col>
+      <ion-col (click)="chooseFromAlbum()" tappable [ngStyle]="{'background-image': 'url('+avatar+')'}">
           <ion-item class="con_3">
               <ion-icon name="images"></ion-icon>             
           </ion-item>
           <font>相册</font>
       </ion-col>
-    </ion-row>
+    </ion-row> 
     <ion-row class="con_row">
-      <ion-col>
+      <ion-col (click)="takePhoto()" tappable [ngStyle]="{'background-image': 'url('+avatar+')'}">
           <ion-item class="con_4" >
               <ion-icon name="videocam"></ion-icon>             
           </ion-item>

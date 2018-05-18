@@ -1,4 +1,4 @@
-page-petpublish {
+page-text {
     ion-title{
         text-align:center;
     }
@@ -10,21 +10,9 @@ page-petpublish {
         font-weight:500;
     }
     .textarea{
-        height:120px;
+        height:200px;
         background-color:white;
-    }
-  
-    .tel{
-        margin-top:10px;
-        height:50px;
-        ion-label{
-            font-size:1.7rem;
-            font-weight:600;
-        }
-    }
-    .tel ion-label{
-        margin-left: 15px;        
-    }
+    } 
     .header-image {
         width: 100px;
         height: 100px;
@@ -33,6 +21,4 @@ page-petpublish {
         padding-left: 15px;
         background-size: cover;
       }
-    
- 
 }
